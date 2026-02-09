@@ -1,0 +1,19 @@
+{
+  "name": "autogatemcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests:autogate": "npx playwright test tests/autogate/loginpage.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0"
+  },
+  "dependencies": {
+    "mailosaur": "^9.0.0"
+  }
+}
