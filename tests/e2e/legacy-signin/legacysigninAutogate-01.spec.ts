@@ -1,21 +1,21 @@
 
 import { test, expect } from '@playwright/test';
-import { getCarsalesAuthCodeEmail } from '../../helpers/mailosaurHelper';
-import testData from '../../test-data/playwright.stg.data.json';
+import { getCarsalesAuthCodeEmail } from '../../../utils/mailosaur.helper';
+import testData from '../../../test-data/playwright.stg.data.json';
 
 //Check autogate is giving 200 status code
 test('Navigate to stg.autogate.co and verify status 200', async ({ page }) => {
-	const response = await page.goto('https://stg.autogate.co');
+	const response = await page.goto(testData.AutogateURL);
 	expect(response && response.status()).toBe(200);
 });
 
 //Check sign in, singup and welcome to Autogate options are available on the page
 test('Wait for DOM and check key elements', async ({ page }) => {
-	await page.goto('https://stg.autogate.co');
+	await page.goto(testData.AutogateURL);
 
 	// Wait for DOM structure to load
 	await page.waitForLoadState('domcontentloaded');
-
+	
 	// Check for h1 "Welcome to Augate"
 	await expect(page.locator('h1', { hasText: 'Welcome to Autogate' })).toBeVisible();
 
@@ -26,10 +26,11 @@ test('Wait for DOM and check key elements', async ({ page }) => {
 	await expect(page.getByRole('button', { name: 'Sign in' })).toBeVisible();
 });
 
+// Successful Sign-In using username and a 2FA code
 // Positive Scenario - Login with valid credentials, fetch OTP from Mailosaur and verify
 test('Login: check name fields, fill, and sign in', async ({ page }) => {
 
-	await page.goto('https://stg.autogate.co');
+	await page.goto(testData.AutogateURL);
 	await page.getByRole('button', { name: 'No, thanks' }).click();
 
 	// Check for username and password input fields by name
