@@ -11,9 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
+    "@types/chance": "^1.1.7",
     "@types/node": "^24.10.0"
   },
   "dependencies": {
+    "chance": "^1.1.11",
     "mailosaur": "^9.0.0"
   }
 }

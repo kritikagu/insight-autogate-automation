@@ -1,7 +1,7 @@
 
 import { test, expect } from '@playwright/test';
-import { getCarsalesAuthCodeEmail } from '../../helpers/mailosaurHelper';
-import testData from '../../test-data/playwright.stg.data.json';
+import { getCarsalesAuthCodeEmail } from '../../../helpers/mailosaurHelper';
+import testData from '../../../test-data/playwright.stg.data.json';
 
 //Check autogate is giving 200 status code
 test('Navigate to stg.autogate.co and verify status 200', async ({ page }) => {
