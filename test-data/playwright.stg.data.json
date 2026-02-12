@@ -1,6 +1,10 @@
 {
-  "testEmail": "production-include@y3kbv132.mailosaur.net",
+  "AutogateURL" : "https://stg.autogate.co",
+  "testEmail": "went-myself@y3kbv132.mailosaur.net",
   "testPassword": "Autogate@123",
+  "testFirstName": "GlobalIdentityLogin",
   "MAILOSAUR_API_KEY": "TKVt4gWdKKM3Zbha5ndRGizFYkMIXvtw",
-  "MAILOSAUR_SERVER_ID": "y3kbv132"
+  "MAILOSAUR_SERVER_ID": "y3kbv132",
+
+  "AutogateUrlGI" : "https://stg.autogate.co?gi=true"
 }
